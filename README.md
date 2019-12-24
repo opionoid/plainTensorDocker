@@ -4,6 +4,7 @@
 このリポジトリをクローンします．
 
 ```
+~ user@ mkdir Develop
 ~ user@ cd Develop
 Develop user@ git clone 
 ```
@@ -12,7 +13,7 @@ Develop user@ git clone
 代わりに zip 等でダウンロードしたあと，作業用フォルダに展開します．
 
 ```
-~ user@ cd Develop/movieTracking
+~ user@ cd Develop/plainTensorDocker
 ```
 
 次に Docker という仮想コンテナを扱えるサービスを入れます．
@@ -32,19 +33,19 @@ URL：https://www.docker.com
 次にDocker にログインします．
 
 ```
-movieTracking user@ docker login
+plainTensorDocker user@ docker login
 ```
 
 作業用ディレクトリの中から doker コマンドを叩きます．
 
 ```terminal01
-movieTracking user$ docker run --rm -v `pwd`:/home/tensor-docker -it tensor-docker:0.1 /bin/bash
+plainTensorDocker user$ docker run --rm -v `pwd`:/home/tensor-docker -it tensor-docker:0.1 /bin/bash
 ```
 
 を入力すると
 
 ```
-root@123456789abc:/home/tensor-docker#
+root@123456789:/home/tensor-docker#
 ```
 
 のように，コンテナに入って作業することができます．
@@ -54,7 +55,7 @@ root@123456789abc:/home/tensor-docker#
 また同期させる必要がない場合，たとえばすべてコンテナ内で解決する場合は
 
 ```
-movieTracking user$ docker run --rm -it tensor-docker:0.1 /bin/bash
+plainTensorDocker user$ docker run --rm -it tensor-docker:0.1 /bin/bash
 ```
 
 で同期せず潜り込むこともできます．
@@ -62,7 +63,7 @@ movieTracking user$ docker run --rm -it tensor-docker:0.1 /bin/bash
 仮想コンテナから抜け出す場合は
 
 ```
-root@123456789abc:/home/tensor-docker# exit
+root@123456789:/home/tensor-docker# exit
 ```
 
 を行ってください．
@@ -85,5 +86,5 @@ root@123456789abc:/home/tensor-docker# exit
 そこからは自由に組み立てて操作することができます．
 
 ```
-root@c06862b56ce3:/workspaces/plainTensorDocker# touch src/main.py
+root@123456789:/workspaces/plainTensorDocker# touch src/main.py
 ```
