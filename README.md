@@ -6,7 +6,7 @@
 ```
 ~ user@ mkdir Develop
 ~ user@ cd Develop
-Develop user@ git clone 
+Develop user@ git clone https://github.com/KindledKindred/plainTensorDocker
 ```
 
 もし GitHub のアカウントを所持していないなら，
