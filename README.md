@@ -26,6 +26,7 @@ URL：https://www.docker.com
 より高度な操作や仮想コンテナの概念の把握を求める場合，以下の記事を参考にしてください．
 
 [Docker入門（さくらインターネット）](https://knowledge.sakura.ad.jp/13265/)
+
 [いまさらだけどDockerに入門したのでわかりやすくまとめてみた（Qiita）](https://qiita.com/gold-kou/items/44860fbda1a34a001fc1)
 
 次にDocker にログインします．
@@ -80,3 +81,9 @@ root@123456789abc:/home/tensor-docker# exit
 拡張機能は Extension タブからローカルにあるものを一括インストールできますし，
 `.devcontainer/devcontainer.json` を編集することで，
 任意の環境に整えることも可能です．
+
+そこからは自由に組み立てて操作することができます．
+
+```
+root@c06862b56ce3:/workspaces/plainTensorDocker# touch src/main.py
+```
