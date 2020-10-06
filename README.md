@@ -72,8 +72,10 @@ root@123456789:/home/tensor-docker# exit
 
 を行ってください．
 
-次回以降はすでに立ち上がったイメージを利用するので `docker start tensor-docker:1.0` を利用します．
-終了する場合は `docker exit` で停止させます．
+次回以降は下記コマンドですでに立ち上がったイメージを利用します．
+```
+docker start tensor-docker:1.0`
+```
 
 ## VScode Remote
 
