@@ -1,15 +1,22 @@
 
 ## 作業開始まで
 
-このリポジトリをクローンします．下ようなコマンドを叩いてもいいですし，gitコマンドが叩けないなら GitHub Desktop から直接クローンしてください．
+
+まずは開発用のディレクトリを作ってください．
+ターミナルは VSCode で `command(ctrl) + shift + @` で起動できます．
 
 ```
 ~ user@ mkdir Develop
 ~ user@ cd Develop
+```
+
+このリポジトリをクローンします．下ようなコマンドを叩いてもいいですし，gitコマンドが叩けないなら GitHub Desktop から直接クローンしてください．
+
+```
 Develop user@ git clone https://github.com/KindledKindred/plainTensorDocker
 ```
 
-該当のフォルダに入ります．
+該当のディレクトリに入ります．
 
 ```
 ~ user@ cd Develop/plainTensorDocker
