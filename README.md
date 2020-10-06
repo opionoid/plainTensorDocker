@@ -1,7 +1,7 @@
 
 ## 作業開始まで
 
-このリポジトリをクローンします．
+このリポジトリをクローンします．下ようなコマンドを叩いてもいいですし，gitコマンドが叩けないなら GitHub Desktop から直接クローンしてください．
 
 ```
 ~ user@ mkdir Develop
@@ -9,8 +9,7 @@
 Develop user@ git clone https://github.com/KindledKindred/plainTensorDocker
 ```
 
-もし GitHub のアカウントを所持していないなら，
-代わりに zip 等でダウンロードしたあと，作業用フォルダに展開します．
+該当のフォルダに入ります．
 
 ```
 ~ user@ cd Develop/plainTensorDocker
