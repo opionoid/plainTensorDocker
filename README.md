@@ -37,9 +37,13 @@ plainTensorDocker user@ docker login
 
 作業用ディレクトリの中から doker コマンドを叩きます．
 
+まずはローカルに `tensor-docker:1.0` を作成します．
+
 ```terminal01
 plainTensorDocker user$ docker build -t tensor-docker:1.0 .
 ```
+
+`tensor-docker:1.0` を起動します．
 
 ```terminal01
 plainTensorDocker user$ docker run --rm -v `pwd`:/home/tensor-docker -it tensor-docker:1.0 /bin/bash
@@ -63,6 +67,12 @@ plainTensorDocker user$ docker run --rm -it tensor-docker:1.0 /bin/bash
 
 で同期せず潜り込むこともできます．
 
+そこからは自由に組み立てて操作することができます．
+
+```
+root@123456789:/workspaces/plainTensorDocker# touch src/main.py
+```
+
 仮想コンテナから抜け出す場合は
 
 ```
@@ -71,26 +81,4 @@ root@123456789:/home/tensor-docker# exit
 
 を行ってください．
 
-次回以降は下記コマンドですでに立ち上がったイメージを利用します．
-```
-docker start tensor-docker:1.0`
-```
 
-## VScode Remote
-
-エディタ左側の Extension（拡張機能）から Remote - container をインストールします．
-その後，左下の `><` のようなマークをクリックし，
-
-`Reopen...` > `Refer Dockerfile...` （一例です，状況に応じて変更してください）
-
-のように提示された選択肢をクリックしていくと，VScode が仮想コンテナ内で開きます．
-
-拡張機能は Extension タブからローカルにあるものを一括インストールできますし，
-`.devcontainer/devcontainer.json` を編集することで，
-任意の環境に整えることも可能です．
-
-そこからは自由に組み立てて操作することができます．
-
-```
-root@123456789:/workspaces/plainTensorDocker# touch src/main.py
-```
