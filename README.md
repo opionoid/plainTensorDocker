@@ -39,7 +39,11 @@ plainTensorDocker user@ docker login
 作業用ディレクトリの中から doker コマンドを叩きます．
 
 ```terminal01
-plainTensorDocker user$ docker run --rm -v `pwd`:/home/tensor-docker -it tensor-docker:0.1 /bin/bash
+plainTensorDocker user$ docker build -t tensor-docker:1.0 .
+```
+
+```terminal01
+plainTensorDocker user$ docker run --rm -v `pwd`:/home/tensor-docker -it tensor-docker:1.0 /bin/bash
 ```
 
 を入力すると
@@ -55,7 +59,7 @@ root@123456789:/home/tensor-docker#
 また同期させる必要がない場合，たとえばすべてコンテナ内で解決する場合は
 
 ```
-plainTensorDocker user$ docker run --rm -it tensor-docker:0.1 /bin/bash
+plainTensorDocker user$ docker run --rm -it tensor-docker:1.0 /bin/bash
 ```
 
 で同期せず潜り込むこともできます．
@@ -68,7 +72,8 @@ root@123456789:/home/tensor-docker# exit
 
 を行ってください．
 
-その他，コピーや削除等は上記記事を参照してください．
+次回以降はすでに立ち上がったイメージを利用するので `docker start tensor-docker:1.0` を利用します．
+終了する場合は `docker exit` で停止させます．
 
 ## VScode Remote
 
